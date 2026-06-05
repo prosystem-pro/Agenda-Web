@@ -12,7 +12,7 @@ import { LoginComponent } from './Paginas/Agenda/login/login.component';
 import { ReportesComponent } from './Paginas/Agenda/reportes/reportes.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: '/logintc', pathMatch: 'full' },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
 
   //Rutas publicas
   { path: 'spinner-global', component: SpinnerGlobalComponent },
@@ -22,10 +22,10 @@ export const routes: Routes = [
   //Transportes Canu
   { path: 'navbarsidebar', component: NabarSidebarComponent, canActivate: [AutorizacionRuta] },
   { path: 'viajes', component: ViajesComponent, canActivate: [AutorizacionRuta] },
-  { path: 'iniciotc', component: MenuComponent, canActivate: [AutorizacionRuta] },
+  { path: 'menu', component: MenuComponent, canActivate: [AutorizacionRuta] },
   { path: 'mantenimiento', component: MantenimientoComponent, canActivate: [AutorizacionRuta] },
   { path: 'reportes', component: ReportesComponent, canActivate: [AutorizacionRuta] },
-  { path: 'logintc', component: LoginComponent },
+  { path: 'login', component: LoginComponent },
 
-  { path: '**', redirectTo: 'logintc' },
+  { path: '**', redirectTo: 'login' },
 ];

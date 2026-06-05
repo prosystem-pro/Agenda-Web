@@ -29,7 +29,7 @@ export class LoginComponent {
       next: (respuesta: any) => {
         if (respuesta && respuesta.data?.Token) {
           // Login exitoso, redirige a la página principal
-          this.router.navigate(['/iniciotc']);
+          this.router.navigate(['/menu']);
         } else {
           // Login fallido
           this.errorLogin = true;

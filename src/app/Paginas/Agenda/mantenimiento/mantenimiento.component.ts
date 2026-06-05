@@ -72,7 +72,7 @@ export class MantenimientoComponent implements OnInit {
     this.codigoUsuario = this.loginServicio.ObtenerCodigoUsuario();
 
     if (!this.codigoUsuario) {
-      this.router.navigate(['/logintc']);
+      this.router.navigate(['/login']);
       return;
     }
 
@@ -192,7 +192,7 @@ export class MantenimientoComponent implements OnInit {
   }
 
   RegresarInicio() {
-    this.router.navigate(['/iniciotc']);
+    this.router.navigate(['/menu']);
   }
 
   /* ======================

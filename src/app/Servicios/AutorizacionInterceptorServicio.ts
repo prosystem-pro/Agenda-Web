@@ -25,12 +25,12 @@ export const AutorizacionInterceptor: HttpInterceptorFn = (Solicitud, Siguiente)
         console.warn('Token expirado o no válido');
         Servicio.EliminarToken();
 
-        // Rutas especiales que deben ir a logintc
-        const rutasLogintc = ['/viajes', '/mantenimiento','/iniciotc','/nabar-sidebar'];
+        // Rutas especiales que deben ir a login
+        const rutasLogin = ['/viajes', '/mantenimiento','/menu','/nabar-sidebar'];
 
         // Redirección condicional
-        if (rutasLogintc.some(ruta => Solicitud.url.includes(ruta))) {
-          router.navigate(['/logintc']);
+        if (rutasLogin.some(ruta => Solicitud.url.includes(ruta))) {
+          router.navigate(['/login']);
         } else {
           router.navigate(['/login']);
         }

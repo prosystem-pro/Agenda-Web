@@ -38,7 +38,7 @@ export class NabarSidebarComponent {
       this.loginServicio.EliminarToken();
       this.loginServicio.EliminarUsuario();
       // Redirigir al login
-      this.router.navigate(['/logintc']);
+      this.router.navigate(['/login']);
     } else {
       // Navegar normalmente
       this.router.navigate([ruta]);

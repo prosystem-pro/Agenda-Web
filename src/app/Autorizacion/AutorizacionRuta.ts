@@ -23,13 +23,13 @@ export class AutorizacionRuta implements CanActivate {
 
       this.loginServicio.EliminarToken();
 
-      // Rutas especiales que deben ir a logintc
-      const rutasLogintc = ['/viajes', '/mantenimiento','/iniciotc','/nabar-sidebar'];
+      // Rutas especiales que deben ir a login
+      const rutasLogin = ['/viajes', '/mantenimiento','/menu','/nabar-sidebar'];
 
       // state.url contiene la ruta a la que se intenta acceder
-      if (rutasLogintc.some(ruta => state.url.includes(ruta))) {
+      if (rutasLogin.some(ruta => state.url.includes(ruta))) {
         setTimeout(() => {
-          this.router.navigate(['/logintc']);
+          this.router.navigate(['/login']);
         }, 0);
       } else {
         setTimeout(() => {
