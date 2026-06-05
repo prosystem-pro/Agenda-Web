@@ -4,19 +4,18 @@ import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
-
 @Component({
-  selector: 'app-login-tc',
+  selector: 'app-login',
   imports: [CommonModule, FormsModule],
-  templateUrl: './login-tc.component.html',
-  styleUrl: './login-tc.component.css'
+  templateUrl: './login.component.html',
+  styleUrl: './login.component.css'
 })
-export class LoginTCComponent {
- nombreUsuario: string = '';
+export class LoginComponent {
+  nombreUsuario: string = '';
   clave: string = '';
   errorLogin: boolean = false;
 
-  constructor(private loginServicio: LoginServicio, private router: Router) {}
+  constructor(private loginServicio: LoginServicio, private router: Router) { }
 
   IniciarSesion(): void {
     this.errorLogin = false; // reset error

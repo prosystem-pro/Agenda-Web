@@ -2,14 +2,13 @@ import { Component } from '@angular/core';
 import { NabarSidebarComponent } from "../nabar-sidebar/nabar-sidebar.component";
 import { Router } from '@angular/router';
 
-
 @Component({
-  selector: 'app-inicio-tc',
+  selector: 'app-menu',
   imports: [NabarSidebarComponent],
-  templateUrl: './inicio-tc.component.html',
-  styleUrl: './inicio-tc.component.css'
+  templateUrl: './menu.component.html',
+  styleUrl: './menu.component.css'
 })
-export class InicioTCComponent {
+export class MenuComponent {
   constructor(private router: Router) { }
 
   navegar(ruta: string) {
